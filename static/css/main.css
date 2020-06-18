@@ -1,16 +1,16 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 /* Markdown */
 :root{
---maincolor: red;
---bordercl:rebeccapurple;
+--maincolor: #aaa;
+--bordercl:#aaa;
 --callouctcolor:dodgerblue;
---hovercolor:navy;
---darkMaincolor: #50fa7b;
+--hovercolor:#aaa;
+--darkMaincolor: ##aaa;
 }
 html {
   color: #232333;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Baloo Bhai 2', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.6em;
 }
@@ -22,19 +22,21 @@ body{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+footer > a, nav > a { 
+  padding: 0 10px;
+}
 ::selection {
   background: var(--maincolor);
   color: #fff;
 }
 
 p {
-  font-family: 'IBM Plex Sans', sans-serif;
-  line-height: 1.5;
+  line-height: 1.35em;
 }
 
 hr {
   border: 0;
-  border-top: 3px dotted var(--bordercl);
+  border-top: 2px solid var(--bordercl);
   margin: 1em 0;
 }
 
@@ -46,7 +48,6 @@ blockquote {
 }
 
 a {
-  border-bottom: 3px solid var(--maincolor);
   color: inherit;
   text-decoration: none;
 }
@@ -55,6 +56,9 @@ a:hover {
     color: #fff;
 }
 
+.list-item {
+  margin-bottom: 2.5em;
+}
 ul {
   list-style: none;
   padding-left: 2ch;
@@ -139,7 +143,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1em 0;
+  margin: 2em 0 0 0;
 }
 
 header .main {
@@ -150,21 +154,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
-h2::before { color: var(--maincolor); content: '## '; }
-h3::before { color: var(--maincolor); content: '### '; }
-h4::before { color: var(--maincolor); content: '#### '; }
-h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
-
 /* Footer */
 footer {
   margin-top: 1em;
 }
 
 /* Common */
-.title h1 {
-  margin-bottom: 0;
+h1.title {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-size: 1.4em;
 }
 
 time {
@@ -173,7 +172,12 @@ time {
 
 /* Posts */
 article .title {
-  margin-bottom: 1em;
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 1.05em;
+  margin-bottom: 10px;
 }
 
 
@@ -199,8 +203,9 @@ article .title {
 }
 
 .site-description {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 .tags li::before{
   content: "🏷 ";
